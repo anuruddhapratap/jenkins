@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the repository (this Jenkinsfile)
-                git branch: 'main', url: 'https://github.com/anuruddhapratap/jenkins'
+                git branch: 'main', url: 'https://github.com/anuruddhapratap/jenkins.git'
             }
         }
         stage('Build') {
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                 echo "Running tests..."
-                echo "Tests passed." > test.log
+                echo "Tests passed." > test1.log
                 '''
             }
         }
