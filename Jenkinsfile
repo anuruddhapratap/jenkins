@@ -1,6 +1,8 @@
 pipeline {
     agent { label 'linux' } // ensure this matches your Linux node label
-
+    tools {
+    git 'LinuxGit'    // Must match exactly the name configured in Jenkins Tools
+    }
     stages {
         stage('Checkout') {
             steps {
